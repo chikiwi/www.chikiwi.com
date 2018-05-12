@@ -19,6 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   猛哥猕猴桃基地 猕猴桃奇异果种植培育采摘销售
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+assets:
+  unify: "/assets/unify/"
 
 # Build settings
 markdown: kramdown

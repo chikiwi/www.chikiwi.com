@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>{{ page.title }}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="{{ 'vendor/bootstrap/bootstrap.min.css' | prepend: site.assets.unify }}">
+{% for style in page.styles %}
+{%   unless style.local %}
+	<link rel="stylesheet" href="{{ style.href | prepend: site.assets.unify }}">
+{%   endunless %}
+{% endfor %}
+	<link rel="stylesheet" href="{{ 'css/unify-core.css' | prepend: site.assets.unify }}">
+	<link rel="stylesheet" href="{{ 'css/unify-components.css' | prepend: site.assets.unify }}">
+	<link rel="stylesheet" href="{{ 'css/unify-globals.css' | prepend: site.assets.unify }}">
+{% for style in page.styles %}
+{%   if style.local %}
+	<link rel="stylesheet" href="{{ style.href | relative_url }}">
+{%   endif %}
+{% endfor %}
+</head>
+<body>
+{{ content }}
+	<script src="{{ 'vendor/jquery/jquery.min.js' | prepend: site.assets.unify }}"></script>
+	<script src="{{ 'vendor/jquery-migrate/jquery-migrate.min.js' | prepend: site.assets.unify }}"></script>
+	<script src="{{ 'vendor/bootstrap/bootstrap.min.js' | prepend: site.assets.unify }}"></script>
+	<script src="{{ 'js/hs.core.js' | prepend: site.assets.unify }}"></script>
+{% for script in page.scripts %}
+{%   unless script.local %}
+	<script src="{{ script.src | prepend: site.assets.unify }}"></script>
+{%   endunless %}
+{% endfor %}
+{% for script in page.scripts %}
+{%   if script.local %}
+	<script src="{{ script.src | relative_url }}"></script>
+{%   endif %}
+{% endfor %}
+</body>
+</html>
