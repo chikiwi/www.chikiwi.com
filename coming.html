@@ -1,0 +1,75 @@
+---
+layout: unify
+styles:
+  - href: vendor/icon-awesome/css/font-awesome.min.css
+scripts:
+  - src: vendor/jquery.countdown.min.js
+  - src: js/components/hs.countdown.js
+  - src: assets/js/coming.js
+    local: true
+title: 第三届猕猴桃采摘节 猛哥有机猕猴桃基地
+---
+	<main class="g-min-height-100vh g-flex-centered g-bg-size-cover g-bg-cover g-pa-15 g-bg-black-opacity-0_2--after" style="background-image: url({{ 'assets/img/coming.jpg' | relative_url }});">
+		<div class="container g-max-width-750 u-bg-overlay__inner g-color-white g-mb-60">
+			<div class="js-countdown text-center text-uppercase u-countdown-v4 g-mb-40 g-mb-70--md" data-end-date="{{ site.coming.date }}" data-month-format="%m" data-days-format="%D" data-hours-format="%H" data-minutes-format="%M" data-seconds-format="%S">
+				<div class="d-inline-block g-px-10 g-px-50--md g-py-15">
+					<div class="js-cd-days g-font-size-20 g-font-size-40--md g-font-weight-700 g-line-height-1 g-mb-5">00</div>
+					<span>天</span>
+				</div>
+				<div class="d-inline-block g-brd-white-opacity-0_4 g-px-10 g-px-60--md g-py-15">
+					<div class="js-cd-hours g-font-size-20 g-font-size-40--md g-font-weight-700 g-line-height-1 g-mb-5">00</div>
+					<span>时</span>
+				</div>
+				<div class="d-inline-block g-brd-white-opacity-0_4 g-px-10 g-px-60--md g-py-15">
+					<div class="js-cd-minutes g-font-size-20 g-font-size-40--md g-font-weight-700 g-line-height-1 g-mb-5">00</div>
+					<span>分</span>
+				</div>
+				<div class="d-inline-block g-brd-white-opacity-0_4 g-px-10 g-px-50--md g-py-15">
+					<div class="js-cd-seconds g-font-size-20 g-font-size-40--md g-font-weight-700 g-line-height-1 g-mb-5">00</div>
+					<span>秒</span>
+				</div>
+			</div>
+			<h2 class="text-center text-uppercase h2 g-font-weight-700 g-font-size-30 g-font-size-50--md g-mb-30 g-mb-70--md">{{ site.coming.title }}</h2>
+			<div class="row">
+				<div class="col-sm-4 col-md-4 text-center text-md-left g-mb-30 g-mb-0--md">
+					<div class="media">
+						<div class="media-left d-flex align-self-center g-hidden-sm-down g-mr-20">
+							<i class="fa fa-calendar g-font-size-27 g-color-white-opacity-0_5"></i>
+						</div>
+						<div class="media-body text-uppercase">
+							<p class="g-mb-5">
+								<strong class="g-font-size-14 g-color-white-opacity-0_7">时间</strong>
+							</p>
+							<h3 class="h3 g-font-size-16 g-color-white mb-0">{{ site.coming.when }}</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 text-center text-md-left g-mb-30 g-mb-0--md">
+					<div class="media">
+						<div class="media-left d-flex align-self-center g-hidden-sm-down g-mr-20">
+							<i class="fa fa-map-marker g-font-size-27 g-color-white-opacity-0_5"></i>
+						</div>
+						<div class="media-body text-uppercase">
+							<p class="g-mb-5">
+								<strong class="g-font-size-14 g-color-white-opacity-0_7">地点</strong>
+							</p>
+							<h3 class="h3 g-font-size-16 g-color-white mb-0">{{ site.coming.where }}</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 text-center text-md-left g-mb-30 g-mb-0--md">
+					<div class="media">
+						<div class="media-left d-flex align-self-center g-hidden-sm-down g-mr-20">
+							<i class="fa fa-phone g-font-size-27 g-color-white-opacity-0_5"></i>
+						</div>
+						<div class="media-body text-uppercase">
+							<p class="g-mb-5">
+								<strong class="g-font-size-14 g-color-white-opacity-0_7">电话</strong>
+							</p>
+							<h3 class="h3 g-font-size-16 g-color-white mb-0">{{ site.coming.contact }}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
