@@ -20,6 +20,9 @@
 	<link rel="stylesheet" href="{{ style.href | relative_url }}">
 {%   endif %}
 {% endfor %}
+{% if jekyll.environment == 'production' and site.baidu.tongji %}
+{%   include tongji.html %}
+{% endif %}
 </head>
 <body>
 {{ content }}
