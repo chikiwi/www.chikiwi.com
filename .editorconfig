@@ -1,0 +1,14 @@
+root = true
+
+[*.yml]
+indent_style = space
+indent_size = 2
+
+[Gemfile]
+indent_style = space
+indent_size = 2
+
+[*.{css,scss,js,html}]
+indent_style = tab
+indent_size = 4
+continuation_indent_size = 8
