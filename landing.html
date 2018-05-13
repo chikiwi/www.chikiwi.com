@@ -1,0 +1,36 @@
+---
+layout: unify
+styles:
+  - href: vendor/icon-awesome/css/font-awesome.min.css
+  - href: vendor/icon-line/css/simple-line-icons.css
+  - href: vendor/icon-etlinefont/style.css
+  - href: vendor/icon-line-pro/style.css
+  - href: vendor/icon-hs/style.css
+  - href: vendor/dzsparallaxer/dzsparallaxer.css
+  - href: vendor/dzsparallaxer/dzsscroller/scroller.css
+  - href: vendor/dzsparallaxer/advancedscroller/plugin.css
+  - href: vendor/animate.css
+  - href: vendor/hamburgers/hamburgers.min.css
+  - href: vendor/fancybox/jquery.fancybox.css
+scripts:
+  - src: js/components/hs.header.js
+  - src: js/helpers/hs.hamburgers.js
+  - src: js/components/hs.scroll-nav.js
+  - src: js/components/hs.popup.js
+  - src: js/components/hs.go-to.js
+  - src: vendor/fancybox/jquery.fancybox.js
+  - src: assets/js/landing.js
+    local: true
+title: 吃猕猴桃吃奇异果 猛哥有机猕猴桃基地
+---
+
+	<main id="home-section">
+{% include landing/header.html %}
+{% include landing/promo.html %}
+{% include landing/products.html %}
+{% include landing/adoption.html %}
+{% include landing/footer.html %}
+		<a class="js-go-to u-go-to-v1" href="#!" data-type="fixed" data-position='{"bottom":15,"right":15}' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+			<i class="hs-icon hs-icon-arrow-top"></i>
+		</a>
+	</main>

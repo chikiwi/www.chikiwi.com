@@ -1,0 +1,28 @@
+		<section id="products-section" class="g-bg-secondary g-py-100">
+			<div class="container">
+				<div class="text-center g-mb-50">
+					<h2 class="h1 g-color-black g-font-weight-600">品种介绍</h2>
+					<p class="lead">基地种植多种猕猴桃品种</p>
+				</div>
+				<div class="row">
+{% assign products = site.products | sort: 'index', 'first' | limit: 3 %}{% for product in products %}
+					<div class="col-md-6 col-lg-4 g-mb-30">
+						<article>
+							<img class="w-100" src="{{ product.thumbnail | relative_url }}" alt="{{ product.title }}">
+							<div class="u-shadow-v24 g-pa-30">
+								<div class="g-mb-30">
+									<h3 class="h4 g-color-black g-font-weight-600 mb-3">
+										<a class="g-color-main g-color-primary--hover g-text-underline--none--hover" href="{{ product.url }}">{{ product.title }}</a>
+									</h3>
+									<p>{{ product.subtitle }}</p>
+								</div>
+								<div class="d-flex justify-content-start">
+									<div class="d-block align-self-center ml-auto">
+										<a class="btn btn-md u-btn-primary g-font-weight-600 text-uppercase" href="#!">电话预订</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+{% endfor %}
+		</section>
