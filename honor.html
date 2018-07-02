@@ -1,0 +1,30 @@
+---
+layout: unify
+styles:
+  - href: vendor/fancybox/jquery.fancybox.min.css
+scripts:
+  - src: vendor/fancybox/jquery.fancybox.min.js
+  - src: js/components/hs.popup.js
+  - src: assets/js/fancybox.js
+    local: true
+images:
+  - 1.jpg
+  - 2.jpg
+  - 3.png
+  - 4.jpg
+title: 鄂王河谷 第三届猕猴桃采摘节 猛哥有机猕猴桃基地
+---
+  <main>
+    <section>
+      <div class="row">
+{% for image in page.images %}
+{% assign url = 'assets/img/honor/0' | append: image | relative_url %}
+        <div class="col-md-6 g-mb-30">
+          <a class="js-fancybox" href="javascript:;" data-type="image" data-src="{{ url }}" data-animate-in="zoomIn" data-animate-out="zoomOut" data-speed="1000" data-overlay-bg="rgba(0, 0, 0, 0.5)">
+            <img class="img-fluid" src="{{ url }}" alt="Image Description">
+          </a>
+        </div>
+{% endfor %}
+      </div>
+    </section>
+  </main>
